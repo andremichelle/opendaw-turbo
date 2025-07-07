@@ -1,0 +1,19 @@
+{
+  "name": "@opendaw/lib-fusion",
+  "version": "0.0.0",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint \"**/*.ts\"",
+    "test": "no tests"
+  },
+  "dependencies": {
+    "@opendaw/lib-std": "*",
+    "@opendaw/lib-runtime": "*"
+  },
+  "devDependencies": {
+    "@opendaw/eslint-config": "*",
+    "@opendaw/typescript-config": "*"
+  }
+}

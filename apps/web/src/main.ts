@@ -8,9 +8,10 @@ import {PPQN} from "@opendaw/lib-dsp"
 import {Wait} from "@opendaw/lib-runtime"
 import {Address} from "@opendaw/lib-box"
 import {Browser} from "@opendaw/lib-dom"
+import {Peaks} from "@opendaw/lib-fusion"
 
 (async () => {
-    console.debug(tryProvide(() => 5), PPQN.toString(PPQN.Bar), Address.compose(UUID.generate(), 3, 42).toString(), Browser.userAgent)
+    console.debug(tryProvide(() => 5), PPQN.toString(PPQN.Bar), Address.compose(UUID.generate(), 3, 42).toString(), Browser.userAgent, Peaks)
     await Wait.frames(60)
     console.debug("done")
 })()
