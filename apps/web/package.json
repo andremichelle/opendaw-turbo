@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@opendaw/lib-std": "*",
+    "@opendaw/lib-dsp": "*",
+    "@opendaw/lib-runtime": "*",
     "@opendaw/ui": "*"
   },
   "devDependencies": {

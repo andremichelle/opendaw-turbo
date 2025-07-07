@@ -5,8 +5,13 @@ import {Counter} from "@opendaw/ui/counter"
 import {setupCounter} from "@opendaw/ui/setup-counter"
 import {tryProvide} from "@opendaw/lib-std"
 import {PPQN} from "@opendaw/lib-dsp"
+import {Wait} from "@opendaw/lib-runtime"
 
-console.debug(tryProvide(() => 5), PPQN.toString(PPQN.Bar))
+(async () => {
+    console.debug(tryProvide(() => 5), PPQN.toString(PPQN.Bar))
+    await Wait.frames(60)
+    console.debug("done")
+})()
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
