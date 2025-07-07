@@ -15,7 +15,7 @@
     "@opendaw/lib-runtime": "*",
     "@opendaw/lib-box": "*",
     "@opendaw/lib-dom": "*",
-    "@opendaw/ui": "*"
+    "@opendaw/lib-jsx": "*"
   },
   "devDependencies": {
     "@opendaw/eslint-config": "*",

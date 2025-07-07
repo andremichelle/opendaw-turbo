@@ -10,6 +10,9 @@
       "DOM.Iterable",
       "DOM.AsyncIterable"
     ],
+    "jsx": "react",
+    "jsxFactory": "createElement",
+    "jsxFragmentFactory": "Fragment",
     "sourceMap": true,
     "resolveJsonModule": true,
     "noEmit": true,
