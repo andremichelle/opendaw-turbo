@@ -1,4 +1,4 @@
-// We do not want to include DOM as a library in ts-config
+// We do not want to include DOM as a library in ts-configs
 // For some strange reason, crypto is not included in WebWorker
 
 export type Crypto = {
