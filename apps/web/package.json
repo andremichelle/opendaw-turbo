@@ -13,6 +13,7 @@
     "@opendaw/lib-std": "*",
     "@opendaw/lib-dsp": "*",
     "@opendaw/lib-runtime": "*",
+    "@opendaw/lib-box": "*",
     "@opendaw/ui": "*"
   },
   "devDependencies": {

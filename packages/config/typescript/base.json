@@ -6,6 +6,7 @@
     "declarationMap": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
     "inlineSources": false,
     "isolatedModules": true,
     "target": "ESNext",
