@@ -14,6 +14,7 @@
     "@opendaw/studio-enums": "*"
   },
   "devDependencies": {
+    "@opendaw/studio-forge-boxes": "workspace:*",
     "@opendaw/eslint-config": "*",
     "@opendaw/typescript-config": "*"
   }

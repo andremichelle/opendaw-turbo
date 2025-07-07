@@ -4,10 +4,9 @@
   "exports": {
     ".": "./src/index.ts"
   },
-  "type": "module",
   "scripts": {
-    "generate-exports": "node generate-exports.js",
-    "build": "npm run generate-exports && tsc",
+    "generate-exports": "node generate-exports.mjs",
+    "build": "npm run generate-exports",
     "lint": "eslint \"**/*.ts\"",
     "test": "echo \"No tests to run\""
   },
