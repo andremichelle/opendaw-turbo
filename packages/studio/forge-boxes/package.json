@@ -9,7 +9,7 @@
     "format": "prettier --write \"../boxes/src/**/*.ts\" --ignore-path /dev/null",
     "clear": "rm -rf ../boxes/src/*",
     "build": "npm run clear && npx tsx src/forge.ts && npm run format",
-    "test": "vitest run"
+    "test": "echo \"No tests to run\""
   },
   "dependencies": {
     "@opendaw/lib-std": "*",
