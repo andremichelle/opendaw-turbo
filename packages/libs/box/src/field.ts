@@ -1,12 +1,12 @@
+import {DataInput, DataOutput, Iterables, Lazy, Nullish, Option, panic, safeExecute, short} from "@opendaw/lib-std"
 import {Address} from "./address"
 import {Box} from "./box"
-import {DataInput, DataOutput, Iterables, Lazy, Nullish, Option, panic, safeExecute, short} from "@opendaw/lib-std"
 import {PointerRules, Vertex, VertexVisitor} from "./vertex"
 import {PointerTypes} from "./pointer"
 import {PointerHub} from "./pointer-hub"
 import {BoxGraph} from "./graph"
 
-export type FieldKey = number // i16 should be sufficient for larger arrays
+export type FieldKey = number // i16 should be enough for larger arrays
 export type FieldKeys = Readonly<Int16Array>
 export type Fields = Record<FieldKey, Field>
 export type FieldConstruct<T extends PointerTypes> = {

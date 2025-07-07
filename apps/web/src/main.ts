@@ -3,12 +3,14 @@ import "./style.css"
 import typescriptLogo from "/typescript.svg"
 import {Counter} from "@opendaw/ui/counter"
 import {setupCounter} from "@opendaw/ui/setup-counter"
-import {tryProvide} from "@opendaw/lib-std"
+import {tryProvide, UUID} from "@opendaw/lib-std"
 import {PPQN} from "@opendaw/lib-dsp"
 import {Wait} from "@opendaw/lib-runtime"
+import {Address} from "@opendaw/lib-box"
+import {Browser} from "@opendaw/lib-dom"
 
 (async () => {
-    console.debug(tryProvide(() => 5), PPQN.toString(PPQN.Bar))
+    console.debug(tryProvide(() => 5), PPQN.toString(PPQN.Bar), Address.compose(UUID.generate(), 3, 42).toString(), Browser.userAgent)
     await Wait.frames(60)
     console.debug("done")
 })()

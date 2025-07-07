@@ -1,0 +1,20 @@
+{
+  "name": "@opendaw/lib-dom",
+  "version": "0.0.0",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint \"**/*.ts\"",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@types/wicg-file-system-access": "^2023.10.6",
+    "@opendaw/lib-std": "*",
+    "@opendaw/lib-runtime": "*"
+  },
+  "devDependencies": {
+    "@opendaw/eslint-config": "*",
+    "@opendaw/typescript-config": "*"
+  }
+}
