@@ -1,4 +1,3 @@
-import {Vertex} from "./vertex"
 import {
     assert,
     ByteArrayInput,
@@ -16,6 +15,7 @@ import {
     Subscription,
     UUID
 } from "@opendaw/lib-std"
+import {Vertex} from "./vertex"
 import {Box} from "./box"
 import {Address} from "./address"
 import {PointerField} from "./pointer"
