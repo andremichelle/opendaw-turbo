@@ -1,23 +1,23 @@
 {
-  "name": "@opendaw/studio-adapters",
+  "name": "@opendaw/open-audio-processor",
   "version": "0.0.0",
   "exports": {
     ".": "./src/index.ts"
   },
-  "type": "module",
   "scripts": {
-    "generate-exports": "node generate-exports.js",
-    "build": "npm run generate-exports && tsc",
     "lint": "eslint \"**/*.ts\"",
+    "build": "esbuild src/EngineProcessor.ts --bundle --format=esm --platform=browser --minify --sourcemap --outfile=../worklet-main/dist/worklet.js",
     "test": "echo \"No tests to run\""
   },
   "dependencies": {
+    "@types/audioworklet": "^0.0.77",
     "@opendaw/lib-std": "*",
     "@opendaw/lib-box": "*",
     "@opendaw/lib-dsp": "*",
     "@opendaw/lib-runtime": "*",
     "@opendaw/studio-enums": "*",
-    "@opendaw/studio-boxes": "*"
+    "@opendaw/studio-boxes": "*",
+    "@opendaw/studio-adapters": "*"
   },
   "devDependencies": {
     "@opendaw/eslint-config": "*",

@@ -59,7 +59,7 @@ export const ifDefined = <T>(value: Nullish<T>, procedure: Procedure<T>): void =
 export const asDefined = <T>(value: Nullish<T>, fail: string = "asDefined failed"): T => value === null || value === undefined ? panic(fail) : value
 export const isInstanceOf = <T>(obj: unknown, clazz: Class<T>): obj is T => obj instanceof clazz
 export const asInstanceOf = <T>(obj: unknown, clazz: Class<T>): T => obj instanceof clazz ? obj as T : panic(`${obj} is not instance of ${clazz}`)
-export const assertInstanceOf = <T>(obj: unknown, clazz: Class<T>): asserts obj is T => {if (!(obj instanceof clazz)) {panic(`${obj} is not instance of ${clazz}`)}}
+export const assertInstanceOf: <T>(obj: unknown, clazz: Class<T>) => asserts obj is T = <T>(obj: unknown, clazz: Class<T>): asserts obj is T => {if (!(obj instanceof clazz)) {panic(`${obj} is not instance of ${clazz}`)}}
 export const tryProvide = <T>(provider: Provider<T>): T => {try {return provider()} catch (reason) {return panic(String(reason))}}
 export const getOrProvide = <T>(value: ValueOrProvider<T>): T => value instanceof Function ? value() : value
 export const safeWrite = (object: any, property: string, value: any): void => property in object ? object[property] = value : undefined

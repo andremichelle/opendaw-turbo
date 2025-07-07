@@ -46,7 +46,9 @@ export namespace ValueEvent {
     /**
      * Computes a value at a given position
      */
-    export const valueAt = (events: EventCollection<ValueEvent>, position: ppqn, fallback: unitValue): unitValue => {
+    export const valueAt = <E extends ValueEvent>(events: EventCollection<E>,
+                                                  position: ppqn,
+                                                  fallback: unitValue): unitValue => {
         if (events.isEmpty()) {return fallback} // no events, nothing to iterate
         const iterator = events.iterateFrom(position)
         const {done, value: prevEvent} = iterator.next()
