@@ -1,4 +1,4 @@
-import {PointerRules, UnreferenceableType} from "lib-box"
+import {PointerRules, UnreferenceableType} from "@opendaw/lib-box"
 import {FieldName, FieldSchema, PointerFieldSchema, PrimitiveFieldSchema} from "@opendaw/lib-box-forge"
 import {Pointers} from "@opendaw/studio-enums"
 

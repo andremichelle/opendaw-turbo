@@ -1,0 +1,23 @@
+{
+  "name": "@opendaw/studio-adapters",
+  "version": "0.0.0",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "lint": "eslint \"**/*.ts\"",
+    "test": "echo \"No tests to run\""
+  },
+  "dependencies": {
+    "@opendaw/lib-std": "*",
+    "@opendaw/lib-box": "*",
+    "@opendaw/lib-dsp": "*",
+    "@opendaw/lib-runtime": "*",
+    "@opendaw/studio-enums": "*",
+    "@opendaw/studio-boxes": "*"
+  },
+  "devDependencies": {
+    "@opendaw/eslint-config": "*",
+    "@opendaw/typescript-config": "*"
+  }
+}

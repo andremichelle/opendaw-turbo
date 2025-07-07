@@ -2,7 +2,7 @@ import {Pointers} from "@opendaw/studio-enums"
 import {DefaultParameterPointerRules} from "./defaults"
 import {BoxSchema, FieldRecord, mergeFields, reserveMany} from "@opendaw/lib-box-forge"
 import {PPQN} from "@opendaw/lib-dsp"
-import {Objects} from "lib-std"
+import {Objects} from "@opendaw/lib-std"
 
 const GrooveBoxAttributes = {
     1: {type: "string", name: "label"},

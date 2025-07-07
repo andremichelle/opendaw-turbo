@@ -1,6 +1,6 @@
 import {BoxSchema, FieldRecord, mergeFields, reserveMany} from "@opendaw/lib-box-forge"
 import {Pointers} from "@opendaw/studio-enums"
-import {Objects} from "lib-std"
+import {Objects} from "@opendaw/lib-std"
 
 const DefaultPointers = [Pointers.Device, Pointers.Selection]
 

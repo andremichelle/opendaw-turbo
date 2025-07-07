@@ -1,4 +1,4 @@
-import {Objects} from "lib-std"
+import {Objects} from "@opendaw/lib-std"
 import {Pointers} from "@opendaw/studio-enums"
 import {BoxSchema, FieldRecord, mergeFields, reserveMany} from "@opendaw/lib-box-forge"
 
