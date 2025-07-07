@@ -1,0 +1,17 @@
+{
+  "name": "@opendaw/ui",
+  "version": "0.0.0",
+  "exports": {
+    "./counter": "./components/counter.ts",
+    "./header": "./components/header.ts",
+    "./setup-counter": "./utils/counter.ts"
+  },
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"**/*.ts\""
+  },
+  "devDependencies": {
+    "@opendaw/eslint-config": "*",
+    "@opendaw/typescript-config": "*"
+  }
+}
