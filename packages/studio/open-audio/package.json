@@ -1,9 +1,14 @@
 {
-  "name": "@opendaw/studio-boxes",
+  "name": "@opendaw/open-audio",
   "version": "0.0.0",
   "exports": {
-    ".": "./src/index.ts"
+    ".": "./src/index.ts",
+    "./worklet.js": "./dist/worklet.js"
   },
+  "files": [
+    "src/**/*",
+    "dist/worklet.js"
+  ],
   "scripts": {
     "lint": "eslint \"**/*.ts\"",
     "test": "echo \"No tests to run\""
@@ -11,7 +16,8 @@
   "dependencies": {
     "@opendaw/lib-std": "*",
     "@opendaw/lib-box": "*",
-    "@opendaw/studio-enums": "*"
+    "@opendaw/studio-enums": "*",
+    "@opendaw/open-audio-processor": "*"
   },
   "devDependencies": {
     "@opendaw/studio-forge-boxes": "*",

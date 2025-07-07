@@ -13,3 +13,5 @@ public/dist
 /packages/libs/box-forge/test/gen/**
 /packages/studio/boxes/src/**
 /packages/studio/adapters/src/index.ts
+/apps/localhost.pem
+/apps/localhost-key.pem

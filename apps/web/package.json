@@ -15,12 +15,19 @@
     "@opendaw/lib-runtime": "*",
     "@opendaw/lib-box": "*",
     "@opendaw/lib-dom": "*",
-    "@opendaw/lib-jsx": "*"
+    "@opendaw/lib-jsx": "*",
+    "@opendaw/studio-enums": "*",
+    "@opendaw/studio-boxes": "*",
+    "@opendaw/studio-adapters": "*",
+    "@opendaw/open-audio": "*"
   },
   "devDependencies": {
+    "@types/node": "^22.15.18",
+    "vite-plugin-cross-origin-isolation": "^0.1.6",
     "@opendaw/eslint-config": "*",
     "@opendaw/typescript-config": "*",
     "eslint": "^8.57.0",
-    "vite": "^7.0.2"
+    "vite": "^7.0.2",
+    "sass": "^1.88.0"
   }
 }

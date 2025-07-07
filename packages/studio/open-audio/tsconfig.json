@@ -4,10 +4,9 @@
     "src"
   ],
   "compilerOptions": {
-    "declaration": true,
-    "declarationMap": true,
     "lib": [
-      "ESNext"
+      "ESNext",
+      "DOM"
     ]
   },
   "exclude": [

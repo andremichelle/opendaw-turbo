@@ -183,7 +183,7 @@ export class ValueRegionBoxAdapter implements LoopableRegionBoxAdapter<ValueEven
         })
     }
 
-    canFlatten(regions: ReadonlyArray<RegionBoxAdapter<unknown>>): boolean {
+    canFlatten(_regions: ReadonlyArray<RegionBoxAdapter<unknown>>): boolean {
         return false
         /*return regions.length > 0 && Arrays.satisfy(regions, (a, b) => a.trackAdapter.contains(b.trackAdapter.unwrap()))
                 && regions.every(region => region.isSelected && region instanceof ValueRegionBoxAdapter)*/
@@ -211,7 +211,7 @@ export class ValueRegionBoxAdapter implements LoopableRegionBoxAdapter<ValueEven
                     } of LoopableRegion.locateLoops(region, region.position, region.complete)) {
                         const searchStart = Math.floor(resultStart - rawStart)
                         const searchEnd = Math.floor(resultEnd - rawStart)
-                        for (const event of region.events.unwrap().iterateRange(searchStart, searchEnd)) {
+                        for (const _event of region.events.unwrap().iterateRange(searchStart, searchEnd)) {
                             // TODO Flatten
                         }
                     }

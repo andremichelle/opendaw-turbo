@@ -4,11 +4,9 @@ import {BoxAdapter} from "../BoxAdapter"
 import {BoxAdaptersContext} from "../BoxAdaptersContext"
 
 export class ModuleConnectionAdapter implements BoxAdapter {
-    readonly #context: BoxAdaptersContext
     readonly #box: ModuleConnectionBox
 
-    constructor(context: BoxAdaptersContext, box: ModuleConnectionBox) {
-        this.#context = context
+    constructor(_context: BoxAdaptersContext, box: ModuleConnectionBox) {
         this.#box = box
     }
 

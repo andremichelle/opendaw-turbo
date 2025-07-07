@@ -18,6 +18,7 @@
     ],
     "noUnusedLocals": false,
     "noUnusedParameters": false,
+    "allowUnusedLabels": true,
     "preserveWatchOutput": true,
     "skipLibCheck": true,
     "strict": true

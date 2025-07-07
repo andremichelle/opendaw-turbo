@@ -6,7 +6,7 @@
   },
   "scripts": {
     "lint": "eslint \"**/*.ts\"",
-    "build": "esbuild src/EngineProcessor.ts --bundle --format=esm --platform=browser --minify --sourcemap --outfile=./dist/worklet.js",
+    "build": "esbuild src/EngineProcessor.ts --bundle --format=esm --platform=browser --minify --sourcemap --outfile=../open-audio/dist/worklet.js",
     "test": "echo \"No tests to run\""
   },
   "dependencies": {
