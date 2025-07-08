@@ -10,6 +10,8 @@
     "lint": "eslint \"src/**/*.ts\""
   },
   "dependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "markdown-it": "^14.1.0",
     "@opendaw/lib-std": "*",
     "@opendaw/lib-dsp": "*",
     "@opendaw/lib-runtime": "*",

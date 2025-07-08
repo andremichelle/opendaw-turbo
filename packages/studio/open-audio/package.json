@@ -3,11 +3,15 @@
   "version": "0.0.0",
   "exports": {
     ".": "./src/index.ts",
-    "./worklet.js": "./dist/worklet.js"
+    "./engine-processor.js": "./dist/engine-processor.js",
+    "./meter-processor.js": "./dist/meter-processor.js",
+    "./recording-processor.js": "./dist/recording-processor.js"
   },
   "files": [
     "src/**/*",
-    "dist/worklet.js"
+    "dist/engine-processor.js",
+    "dist/meter-processor.js",
+    "dist/recording-processor.js"
   ],
   "scripts": {
     "lint": "eslint \"**/*.ts\"",

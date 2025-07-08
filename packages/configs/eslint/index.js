@@ -15,6 +15,17 @@ module.exports = {
     },
     rules: {
         "@typescript-eslint/no-non-null-assertion": "off",
-        "@typescript-eslint/no-unused-vars": ["warn", {"argsIgnorePattern": "^_"}]
+        "@typescript-eslint/no-unused-vars": ["warn", {"argsIgnorePattern": "^_"}],
+        "no-restricted-imports": [
+            "error",
+            {
+                "patterns": [
+                    {
+                        "group": ["**/src/**", "@opendaw/*/src/**"],
+                        "message": "Direct imports from src folders are not allowed. Use package exports instead."
+                    }
+                ]
+            }
+        ]
     },
 };

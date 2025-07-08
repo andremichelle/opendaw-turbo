@@ -3,14 +3,16 @@ import {assert} from "@opendaw/lib-std"
 import {PPQN} from "@opendaw/lib-dsp"
 import {Promises} from "@opendaw/lib-runtime"
 import {AnimationFrame, Browser} from "@opendaw/lib-dom"
-import {EngineWorklet, Project} from "@opendaw/open-audio"
+import {AudioWorklets, EngineWorklet, Project} from "@opendaw/open-audio"
 import {testFeatures} from "./features"
 import {MainThreadAudioLoaderManager} from "./MainThreadAudioLoaderManager"
-import EngineWorkletUrl from "@opendaw/open-audio/worklet.js?url"
+import EngineProcessorUrl from "@opendaw/open-audio/engine-processor.js?url"
+import MeterProcessorUrl from "@opendaw/open-audio/meter-processor.js?url"
+import RecordingProcessorUrl from "@opendaw/open-audio/recording-processor.js?url"
 
 (async () => {
     console.debug("openDAW -> headless")
-    console.debug("agent", Browser.userAgent)
+    console.debug("Agent", Browser.userAgent)
     console.debug("isLocalHost", Browser.isLocalHost())
     assert(crossOriginIsolated, "window must be crossOriginIsolated")
     console.debug("booting...")
@@ -26,11 +28,22 @@ import EngineWorkletUrl from "@opendaw/open-audio/worklet.js?url"
     const context = new AudioContext({latencyHint: 0})
     console.debug(`AudioContext state: ${context.state}, sampleRate: ${context.sampleRate}`)
     {
+        const {status, error} = await Promises.tryCatch(AudioWorklets.install(context, {
+            engine: EngineProcessorUrl,
+            meter: MeterProcessorUrl,
+            recording: RecordingProcessorUrl
+        }))
+        if (status === "rejected") {
+            alert(`Could not install AudioWorklets (${error})`)
+            return
+        }
+    }
+    {
         const {
             status,
             error,
             value: engineFactory
-        } = await Promises.tryCatch(EngineWorklet.bootFactory(context, EngineWorkletUrl))
+        } = await Promises.tryCatch(EngineWorklet.bootFactory(context, EngineProcessorUrl))
         if (status === "rejected") {
             alert(`Could not boot EngineWorklet (${error})`)
             return

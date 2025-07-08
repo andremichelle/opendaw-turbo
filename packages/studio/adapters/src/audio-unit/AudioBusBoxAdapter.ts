@@ -4,6 +4,7 @@ import {AudioBusBox} from "@opendaw/studio-boxes"
 import {DeviceBoxAdapter, DeviceHost, Devices} from "../devices"
 import {BoxAdaptersContext} from "../BoxAdaptersContext"
 import {AudioUnitBoxAdapter} from "./AudioUnitBoxAdapter"
+import {IconSymbol} from "../IconSymbol"
 
 export class AudioBusBoxAdapter implements DeviceBoxAdapter {
     readonly type = "bus"
@@ -30,6 +31,7 @@ export class AudioBusBoxAdapter implements DeviceBoxAdapter {
     get iconField(): StringField {return this.#box.icon}
     get labelField(): StringField {return this.#box.label}
     get colorField(): StringField {return this.#box.color}
+    get iconSymbol(): IconSymbol {return IconSymbol.fromName(this.iconField.getValue() ?? "audio-bus")}
 
     deviceHost(): DeviceHost {
         return this.#context.boxAdapters

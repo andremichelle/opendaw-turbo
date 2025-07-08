@@ -6,7 +6,10 @@
   },
   "scripts": {
     "lint": "eslint \"**/*.ts\"",
-    "build": "esbuild src/EngineProcessor.ts --bundle --format=esm --platform=browser --minify --sourcemap --outfile=../open-audio/dist/worklet.js",
+    "build-engine": "esbuild src/EngineProcessor.ts --bundle --format=esm --platform=browser --minify --sourcemap --outfile=../open-audio/dist/engine-processor.js",
+    "build-meter": "esbuild src/MeterProcessor.ts --bundle --format=esm --platform=browser --minify --sourcemap --outfile=../open-audio/dist/meter-processor.js",
+    "build-recording": "esbuild src/RecordingProcessor.ts --bundle --format=esm --platform=browser --minify --sourcemap --outfile=../open-audio/dist/recording-processor.js",
+    "build": "npm run build-engine && npm run build-meter && npm run build-recording",
     "test": "echo \"No tests to run\""
   },
   "dependencies": {
