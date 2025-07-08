@@ -3,11 +3,12 @@ import {assert} from "@opendaw/lib-std"
 import {PPQN} from "@opendaw/lib-dsp"
 import {Promises} from "@opendaw/lib-runtime"
 import {AnimationFrame, Browser} from "@opendaw/lib-dom"
-import {AudioWorklets, EngineWorklet, Project} from "@opendaw/open-audio"
+import {Project, Worklets} from "@opendaw/open-audio"
 import {testFeatures} from "./features"
 import {MainThreadAudioLoaderManager} from "./MainThreadAudioLoaderManager"
-import EngineProcessorUrl from "@opendaw/open-audio/engine-processor.js?url"
+
 import MeterProcessorUrl from "@opendaw/open-audio/meter-processor.js?url"
+import EngineProcessorUrl from "@opendaw/open-audio/engine-processor.js?url"
 import RecordingProcessorUrl from "@opendaw/open-audio/recording-processor.js?url"
 
 (async () => {
@@ -28,29 +29,20 @@ import RecordingProcessorUrl from "@opendaw/open-audio/recording-processor.js?ur
     const context = new AudioContext({latencyHint: 0})
     console.debug(`AudioContext state: ${context.state}, sampleRate: ${context.sampleRate}`)
     {
-        const {status, error} = await Promises.tryCatch(AudioWorklets.install(context, {
-            engine: EngineProcessorUrl,
+        const {status, error} = await Promises.tryCatch(Worklets.install(context, {
             meter: MeterProcessorUrl,
+            engine: EngineProcessorUrl,
             recording: RecordingProcessorUrl
         }))
         if (status === "rejected") {
-            alert(`Could not install AudioWorklets (${error})`)
+            alert(`Could not install Worklets (${error})`)
             return
         }
     }
     {
-        const {
-            status,
-            error,
-            value: engineFactory
-        } = await Promises.tryCatch(EngineWorklet.bootFactory(context, EngineProcessorUrl))
-        if (status === "rejected") {
-            alert(`Could not boot EngineWorklet (${error})`)
-            return
-        }
         const audioManager = new MainThreadAudioLoaderManager(context)
         const project = Project.load({audioManager}, await fetch("subset.od").then(x => x.arrayBuffer()))
-        const worklet = engineFactory.create(context => new EngineWorklet(context, project))
+        const worklet = Worklets.get(context).createEngine(project)
         await worklet.isReady()
         while (!await worklet.queryLoadingComplete()) {}
         worklet.connect(context.destination)

@@ -2,7 +2,7 @@ import {EmptyExec, int} from "@opendaw/lib-std"
 import {Files} from "@opendaw/lib-dom"
 import {mergeChunkPlanes, RingBuffer} from "@opendaw/studio-adapters"
 import {WorkletFactory} from "./WorkletFactory"
-import {encodeWavFloat} from "./wav"
+import {encodeWavFloat} from "./Wav"
 
 const RenderQuantum = 128
 

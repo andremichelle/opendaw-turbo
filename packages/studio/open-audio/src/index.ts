@@ -1,4 +1,5 @@
-export {AudioWorklets} from "./AudioWorklets"
 export {EngineWorklet} from "./EngineWorklet"
 export {Project} from "./Project"
+export {encodeWavFloat} from "./Wav"
 export {WorkletFactory} from "./WorkletFactory"
+export {Worklets} from "./Worklets"
