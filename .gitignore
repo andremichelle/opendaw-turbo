@@ -14,5 +14,6 @@ public/build-info.json
 /packages/libs/box-forge/test/gen/**
 /packages/studio/boxes/src/**
 /packages/studio/adapters/src/index.ts
+/packages/apps/studio/public/build-info.json
 /packages/apps/localhost.pem
 /packages/apps/localhost-key.pem

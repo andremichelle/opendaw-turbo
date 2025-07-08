@@ -1,0 +1,3 @@
+# Browser Permissions
+
+openDAW requires grand access to your microphone. tbc...

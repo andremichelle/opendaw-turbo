@@ -171,7 +171,7 @@ registerProcessor("engine-processor", class extends AudioWorkletProcessor implem
                 queryLoadingComplete: (): Promise<boolean> =>
                     Promise.resolve(this.#boxGraph.boxes().every(box => box.accept<BoxVisitor<boolean>>({
                         visitAudioFileBox: (box: AudioFileBox) =>
-                            this.#audioManager.getOrCreateAudioLoader(box.address.uuid).data.nonEmpty() && box.pointerHub.nonEmpty()
+                            this.#audioManager.getOrCreate(box.address.uuid).data.nonEmpty() && box.pointerHub.nonEmpty()
                     }) ?? true)),
                 panic: () => this.#panic = true,
                 noteOn: (uuid: UUID.Format, pitch: byte, velocity: unitValue) =>

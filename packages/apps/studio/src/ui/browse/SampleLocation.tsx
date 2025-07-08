@@ -1,0 +1,1 @@
+export const enum SampleLocation {Cloud, Local}

@@ -115,7 +115,7 @@ export class EngineWorklet extends AudioWorkletNode {
                 ready: (): void => resolve(),
                 fetchAudio: (uuid: UUID.Format): Promise<AudioData> => {
                     return new Promise((resolve, reject) => {
-                        const handler = project.audioManager.getOrCreateAudioLoader(uuid)
+                        const handler = project.audioManager.getOrCreate(uuid)
                         handler.subscribe(state => {
                             if (state.type === "error") {
                                 reject(state.reason)

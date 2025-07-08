@@ -3,7 +3,8 @@ import {Peaks} from "@opendaw/lib-fusion"
 import {Observer, Option, Subscription, unitValue, UUID} from "@opendaw/lib-std"
 
 export interface AudioLoaderManager {
-    getOrCreateAudioLoader(uuid: UUID.Format): AudioLoader
+    getOrCreate(uuid: UUID.Format): AudioLoader
+    invalidate(uuid: UUID.Format): void
 }
 
 export interface AudioLoader {

@@ -41,7 +41,7 @@ export class NanoDeviceProcessor extends AudioProcessor implements InstrumentDev
             context.registerProcessor(this),
             adapter.box.file.catchupAndSubscribe((pointer) =>
                 this.loader = pointer.targetVertex.map(({box}) =>
-                    context.audioManager.getOrCreateAudioLoader(box.address.uuid)))
+                    context.audioManager.getOrCreate(box.address.uuid)))
         )
         this.readAllParameters()
     }

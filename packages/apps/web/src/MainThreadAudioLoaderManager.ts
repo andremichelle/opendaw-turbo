@@ -11,7 +11,9 @@ export class MainThreadAudioLoaderManager implements AudioLoaderManager {
         this.#loaders = UUID.newSet(loader => loader.uuid)
     }
 
-    getOrCreateAudioLoader(uuid: UUID.Format): AudioLoader {
+    getOrCreate(uuid: UUID.Format): AudioLoader {
         return this.#loaders.getOrCreate(uuid, uuid => new MainThreadAudioLoader(this.#context, uuid))
     }
+
+    invalidate(_uuid: UUID.Format): void {}
 }

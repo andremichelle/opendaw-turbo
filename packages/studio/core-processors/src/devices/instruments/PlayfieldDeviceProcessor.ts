@@ -38,7 +38,7 @@ export class PlayfieldDeviceProcessor implements DeviceProcessor, NoteEventTarge
                         processor,
                         terminable: context.registerEdge(this.#sequencer, processor)
                     })
-                    context.audioManager.getOrCreateAudioLoader(adapter.fileUUID()) // preloading files
+                    context.audioManager.getOrCreate(adapter.fileUUID()) // preloading files
                 },
                 onRemove: (adapter: PlayfieldSampleBoxAdapter) => {
                     const {terminable, processor} = this.#sampleSet.removeByKey(adapter.uuid)

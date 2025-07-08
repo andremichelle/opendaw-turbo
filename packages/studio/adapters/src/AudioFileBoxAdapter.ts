@@ -25,7 +25,7 @@ export class AudioFileBoxAdapter implements BoxAdapter {
     get peaks(): Option<Peaks> {return this.getOrCreateAudioLoader().peaks}
 
     getOrCreateAudioLoader(): AudioLoader {
-        return this.#context.audioManager.getOrCreateAudioLoader(this.#box.address.uuid)
+        return this.#context.audioManager.getOrCreate(this.#box.address.uuid)
     }
 
     terminate(): void {}

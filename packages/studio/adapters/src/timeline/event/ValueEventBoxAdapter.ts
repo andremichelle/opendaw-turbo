@@ -1,11 +1,22 @@
+import {
+    Arrays,
+    Cache,
+    Comparator,
+    int,
+    Option,
+    Selectable,
+    Terminable,
+    Terminator,
+    unitValue,
+    UUID
+} from "@opendaw/lib-std"
 import {Interpolation, ppqn, ValueEvent} from "@opendaw/lib-dsp"
-import {Arrays, Cache, Comparator, int, Option, Selectable, Terminable, Terminator, unitValue, UUID} from "@opendaw/lib-std"
 import {Address, Field, Propagation, Update} from "@opendaw/lib-box"
 import {Pointers} from "@opendaw/studio-enums"
+import {ValueEventBox} from "@opendaw/studio-boxes"
 import {ValueEventCollectionBoxAdapter} from "../collection/ValueEventCollectionBoxAdapter"
 import {BoxAdapter} from "../../BoxAdapter"
 import {BoxAdaptersContext} from "../../BoxAdaptersContext"
-import {ValueEventBox} from "@opendaw/studio-boxes"
 import {InterpolationFieldAdapter} from "./InterpolationFieldAdapter"
 
 type CopyToParams = {

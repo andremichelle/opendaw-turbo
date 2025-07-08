@@ -1,5 +1,5 @@
 import {AudioLoaderManager} from "@opendaw/studio-adapters"
 
-export type ProjectEnv = {
+export interface ProjectEnv {
     audioManager: AudioLoaderManager
 }

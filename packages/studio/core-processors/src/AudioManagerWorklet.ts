@@ -27,7 +27,9 @@ export class AudioManagerWorklet implements AudioLoaderManager {
         this.#set = UUID.newSet<AudioLoader>(handler => handler.uuid)
     }
 
-    getOrCreateAudioLoader(uuid: UUID.Format): AudioLoader {
+    getOrCreate(uuid: UUID.Format): AudioLoader {
         return this.#set.getOrCreate(uuid, uuid => new AudioLoaderWorklet(uuid, this.#engineToClient))
     }
+
+    invalidate(_uuid: UUID.Format) {}
 }

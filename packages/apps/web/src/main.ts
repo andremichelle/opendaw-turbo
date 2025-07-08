@@ -3,7 +3,7 @@ import {assert} from "@opendaw/lib-std"
 import {PPQN} from "@opendaw/lib-dsp"
 import {AnimationFrame, Browser} from "@opendaw/lib-dom"
 import {Promises} from "@opendaw/lib-runtime"
-import {Project, SyncLogReader, Worklets} from "@opendaw/studio-core"
+import {Project, Worklets} from "@opendaw/studio-core"
 import MeterProcessorUrl from "@opendaw/studio-core/meter-processor.js?url"
 import EngineProcessorUrl from "@opendaw/studio-core/engine-processor.js?url"
 import RecordingProcessorUrl from "@opendaw/studio-core/recording-processor.js?url"
@@ -11,7 +11,6 @@ import {testFeatures} from "./features"
 import {MainThreadAudioLoaderManager} from "./MainThreadAudioLoaderManager"
 
 (async () => {
-    SyncLogReader
     console.debug("openDAW -> headless")
     console.debug("Agent", Browser.userAgent)
     console.debug("isLocalHost", Browser.isLocalHost())

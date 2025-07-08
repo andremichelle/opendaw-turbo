@@ -71,10 +71,13 @@ export namespace ValueEvent {
      * This is used for the ValueClipPainter to draw circular automation curves.
      * It has been tested in the AutomationPage.
      */
-    export function* quantise(events: EventCollection<ValueEvent>,
-                              position: ppqn,
-                              duration: ppqn,
-                              numSteps: number): IteratorObject<{ position: ppqn, value: unitValue }, void> {
+    export function* quantise<E extends ValueEvent>(events: EventCollection<E>,
+                                                    position: ppqn,
+                                                    duration: ppqn,
+                                                    numSteps: number): IteratorObject<{
+        position: ppqn,
+        value: unitValue
+    }, void> {
         if (events.isEmpty()) {return} // no events, nothing to iterate
         const iterator = events.iterateFrom(position)
         const {done, value} = iterator.next()
