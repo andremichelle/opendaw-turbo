@@ -20,12 +20,17 @@
   "dependencies": {
     "@opendaw/lib-std": "*",
     "@opendaw/lib-box": "*",
+    "@opendaw/lib-dsp": "*",
+    "@opendaw/lib-runtime": "*",
+    "@opendaw/lib-fusion": "*",
     "@opendaw/studio-enums": "*",
-    "@opendaw/studio-core-processors": "*"
+    "@opendaw/studio-boxes": "*",
+    "@opendaw/studio-adapters": "*"
   },
   "devDependencies": {
     "@opendaw/studio-forge-boxes": "*",
     "@opendaw/eslint-config": "*",
-    "@opendaw/typescript-config": "*"
+    "@opendaw/typescript-config": "*",
+    "@opendaw/studio-core-processors": "*"
   }
 }
