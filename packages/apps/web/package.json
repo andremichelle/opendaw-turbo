@@ -21,7 +21,7 @@
     "@opendaw/studio-enums": "*",
     "@opendaw/studio-boxes": "*",
     "@opendaw/studio-adapters": "*",
-    "@opendaw/open-audio": "*"
+    "@opendaw/core": "*"
   },
   "devDependencies": {
     "@types/node": "^22.15.18",

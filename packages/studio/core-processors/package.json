@@ -1,14 +1,14 @@
 {
-  "name": "@opendaw/open-audio-processor",
+  "name": "@opendaw/core-processors",
   "version": "0.0.0",
   "exports": {
     ".": "./src/index.ts"
   },
   "scripts": {
     "lint": "eslint \"**/*.ts\"",
-    "build-engine": "esbuild src/EngineProcessor.ts --bundle --format=esm --platform=browser --minify --sourcemap --outfile=../open-audio/dist/engine-processor.js",
-    "build-meter": "esbuild src/MeterProcessor.ts --bundle --format=esm --platform=browser --minify --sourcemap --outfile=../open-audio/dist/meter-processor.js",
-    "build-recording": "esbuild src/RecordingProcessor.ts --bundle --format=esm --platform=browser --minify --sourcemap --outfile=../open-audio/dist/recording-processor.js",
+    "build-engine": "esbuild src/EngineProcessor.ts --bundle --format=esm --platform=browser --minify --sourcemap --outfile=../core/dist/engine-processor.js",
+    "build-meter": "esbuild src/MeterProcessor.ts --bundle --format=esm --platform=browser --minify --sourcemap --outfile=../core/dist/meter-processor.js",
+    "build-recording": "esbuild src/RecordingProcessor.ts --bundle --format=esm --platform=browser --minify --sourcemap --outfile=../core/dist/recording-processor.js",
     "build": "npm run build-engine && npm run build-meter && npm run build-recording",
     "test": "echo \"No tests to run\""
   },

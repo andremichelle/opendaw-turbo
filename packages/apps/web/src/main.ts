@@ -1,15 +1,14 @@
 import "./style.css"
 import {assert} from "@opendaw/lib-std"
+import {AnimationFrame, Browser} from "@opendaw/lib-dom"
 import {PPQN} from "@opendaw/lib-dsp"
 import {Promises} from "@opendaw/lib-runtime"
-import {AnimationFrame, Browser} from "@opendaw/lib-dom"
-import {Project, Worklets} from "@opendaw/open-audio"
+import {Project, Worklets} from "@opendaw/core"
 import {testFeatures} from "./features"
 import {MainThreadAudioLoaderManager} from "./MainThreadAudioLoaderManager"
-
-import MeterProcessorUrl from "@opendaw/open-audio/meter-processor.js?url"
-import EngineProcessorUrl from "@opendaw/open-audio/engine-processor.js?url"
-import RecordingProcessorUrl from "@opendaw/open-audio/recording-processor.js?url"
+import MeterProcessorUrl from "@opendaw/core/meter-processor.js?url"
+import EngineProcessorUrl from "@opendaw/core/engine-processor.js?url"
+import RecordingProcessorUrl from "@opendaw/core/recording-processor.js?url"
 
 (async () => {
     console.debug("openDAW -> headless")
