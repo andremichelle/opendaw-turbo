@@ -9,8 +9,6 @@ import {
     UUID
 } from "@opendaw/lib-std"
 import {BoxGraph, Editing} from "@opendaw/lib-box"
-import {LiveStreamBroadcaster, LiveStreamReceiver} from "@opendaw/lib-fusion"
-import {AudioUnitType} from "@opendaw/studio-enums"
 import {
     AudioBusBox,
     AudioUnitBox,
@@ -34,12 +32,14 @@ import {
     ParameterFieldAdapters,
     ProjectDecoder,
     RootBoxAdapter,
-    TimelineBoxAdapter
+    TimelineBoxAdapter,
+    UserEditingManager,
+    VertexSelection
 } from "@opendaw/studio-adapters"
-
-export type ProjectEnv = {
-    audioManager: AudioLoaderManager
-}
+import {LiveStreamBroadcaster, LiveStreamReceiver} from "@opendaw/lib-fusion"
+import {AudioUnitType} from "@opendaw/studio-enums"
+import {ProjectEnv} from "./ProjectEnv"
+import {Mixer} from "./Mixer"
 
 // Main Entry Point for a Project
 //
@@ -61,6 +61,7 @@ export class Project implements BoxAdaptersContext, Terminable, TerminableOwner 
             box.collection.refer(rootBox.audioBusses)
             box.label.setValue("Output")
             box.icon.setValue(IconSymbol.toName(IconSymbol.SpeakerHeadphone))
+            box.color.setValue(/*Colors.blue*/ "hsl(189, 100%, 65%)") // TODO
         })
         const masterAudioUnit = AudioUnitBox.create(boxGraph, UUID.generate(), box => {
             box.type.setValue(AudioUnitType.Output)
@@ -153,18 +154,20 @@ export class Project implements BoxAdaptersContext, Terminable, TerminableOwner 
     readonly timelineBox: TimelineBox
 
     readonly editing: Editing
+    readonly selection: VertexSelection
     readonly boxAdapters: BoxAdapters
+    readonly userEditingManager: UserEditingManager
     readonly parameterFieldAdapters: ParameterFieldAdapters
     readonly liveStreamReceiver: LiveStreamReceiver
+    readonly mixer: Mixer
 
-    private constructor(env: ProjectEnv,
-                        boxGraph: BoxGraph, {
-                            rootBox,
-                            userInterfaceBox,
-                            masterBusBox,
-                            masterAudioUnit,
-                            timelineBox
-                        }: MandatoryBoxes) {
+    private constructor(env: ProjectEnv, boxGraph: BoxGraph, {
+        rootBox,
+        userInterfaceBox,
+        masterBusBox,
+        masterAudioUnit,
+        timelineBox
+    }: MandatoryBoxes) {
         this.#env = env
         this.boxGraph = boxGraph
         this.rootBox = rootBox
@@ -173,9 +176,16 @@ export class Project implements BoxAdaptersContext, Terminable, TerminableOwner 
         this.masterAudioUnit = masterAudioUnit
         this.timelineBox = timelineBox
         this.liveStreamReceiver = this.#terminator.own(new LiveStreamReceiver())
+
         this.editing = new Editing(this.boxGraph)
+        this.selection = new VertexSelection(this.editing, this.boxGraph)
         this.parameterFieldAdapters = new ParameterFieldAdapters()
         this.boxAdapters = this.#terminator.own(new BoxAdapters(this))
+        this.userEditingManager = new UserEditingManager(this.editing)
+        this.userEditingManager.follow(this.userInterfaceBox)
+        this.selection.switch(this.userInterfaceBox.selection)
+
+        this.mixer = new Mixer(this.rootBoxAdapter.audioUnits)
 
         console.debug(`Project was created on ${this.rootBoxAdapter.created.toString()}`)
     }

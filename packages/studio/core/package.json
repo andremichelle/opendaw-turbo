@@ -1,5 +1,5 @@
 {
-  "name": "@opendaw/core",
+  "name": "@opendaw/studio-core",
   "version": "0.0.0",
   "exports": {
     ".": "./src/index.ts",
@@ -21,7 +21,7 @@
     "@opendaw/lib-std": "*",
     "@opendaw/lib-box": "*",
     "@opendaw/studio-enums": "*",
-    "@opendaw/core-processors": "*"
+    "@opendaw/studio-core-processors": "*"
   },
   "devDependencies": {
     "@opendaw/studio-forge-boxes": "*",

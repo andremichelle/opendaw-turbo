@@ -1,5 +1,5 @@
 {
-  "name": "@opendaw/core-processors",
+  "name": "@opendaw/studio-core-processors",
   "version": "0.0.0",
   "exports": {
     ".": "./src/index.ts"
