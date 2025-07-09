@@ -11,7 +11,7 @@ dist-ssr
 server/dist
 public/dist
 public/build-info.json
-/packages/libs/box-forge/test/gen/**
+/packages/lib/box-forge/test/gen/**
 /packages/studio/boxes/src/**
 /packages/studio/adapters/src/index.ts
 /packages/apps/studio/public/build-info.json
