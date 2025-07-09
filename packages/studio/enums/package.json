@@ -1,5 +1,6 @@
 {
   "name": "@opendaw/studio-enums",
+  "types": "./src/index.d.ts",
   "version": "0.0.0",
   "exports": {
     ".": "./src/index.ts"

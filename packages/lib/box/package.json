@@ -1,6 +1,7 @@
 {
   "name": "@opendaw/lib-box",
   "version": "0.0.0",
+  "types": "./src/index.ts",
   "exports": {
     ".": "./src/index.ts"
   },

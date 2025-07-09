@@ -6,6 +6,8 @@
     "cert": "bash ./scripts/cert.sh",
     "clean": "bash ./scripts/clean.sh",
     "build": "turbo build",
+    "dev:studio": "turbo run dev --filter=@opendaw/app-studio",
+    "dev:headless": "turbo run dev --filter=@opendaw/app-headless",
     "dev": "turbo run dev",
     "test": "turbo run test",
     "lint": "turbo run lint",

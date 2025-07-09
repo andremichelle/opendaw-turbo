@@ -1,0 +1,24 @@
+{
+  "name": "@opendaw/studio-sdk",
+  "version": "1.0.0",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist"],
+  "scripts": {
+  },
+  "dependencies": {
+    "@opendaw/lib-std": "*",
+    "@opendaw/lib-dsp": "*",
+    "@opendaw/lib-box": "*",
+    "@opendaw/lib-runtime": "*",
+    "@opendaw/lib-fusion": "*",
+    "@opendaw/studio-enums": "*",
+    "@opendaw/studio-boxes": "*",
+    "@opendaw/studio-adapters": "*",
+    "@opendaw/studio-core": "*"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0"
+  }
+}

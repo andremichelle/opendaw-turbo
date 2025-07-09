@@ -1,6 +1,7 @@
 {
   "name": "@opendaw/lib-fusion",
   "version": "0.0.0",
+  "types": "./src/index.d.ts",
   "exports": {
     ".": "./src/index.ts"
   },
