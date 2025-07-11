@@ -15,6 +15,7 @@
     "dist/recording-processor.js"
   ],
   "scripts": {
+    "build": "tsc",
     "lint": "eslint \"**/*.ts\"",
     "test": "echo \"No tests to run\""
   },

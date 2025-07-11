@@ -7,7 +7,7 @@
   },
   "scripts": {
     "generate-exports": "node generate-exports.mjs",
-    "build": "npm run generate-exports",
+    "build": "npm run generate-exports && tsc",
     "lint": "eslint \"**/*.ts\"",
     "test": "echo \"No tests to run\""
   },

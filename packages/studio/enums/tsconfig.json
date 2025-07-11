@@ -1,15 +1,15 @@
 {
   "extends": "@opendaw/typescript-config/base.json",
-  "include": [
-    "src"
-  ],
   "compilerOptions": {
     "lib": [
-      "ESNext",
-      "DOM"
-    ]
+      "ESNext"
+    ],
+    "outDir": "./dist",
+    "rootDir": "./src"
   },
   "exclude": [
-    "node_modules"
+    "dist",
+    "node_modules",
+    "**/*.test.ts"
   ]
 }
