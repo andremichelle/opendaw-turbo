@@ -1,6 +1,6 @@
 {
   "name": "@opendaw/studio-forge-boxes",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "exports": {
     ".": "./src/index.ts"
@@ -13,14 +13,14 @@
     "test": "echo \"No tests to run\""
   },
   "dependencies": {
-    "@opendaw/lib-std": "*",
-    "@opendaw/lib-box": "*",
-    "@opendaw/lib-dsp": "*",
-    "@opendaw/lib-runtime": "*",
-    "@opendaw/studio-enums": "*"
+    "@opendaw/lib-box": "^0.0.1",
+    "@opendaw/lib-dsp": "^0.0.1",
+    "@opendaw/lib-runtime": "^0.0.1",
+    "@opendaw/lib-std": "^0.0.1",
+    "@opendaw/studio-enums": "^0.0.1"
   },
   "devDependencies": {
-    "@opendaw/eslint-config": "*",
-    "@opendaw/typescript-config": "*"
+    "@opendaw/eslint-config": "^0.0.1",
+    "@opendaw/typescript-config": "^0.0.1"
   }
 }

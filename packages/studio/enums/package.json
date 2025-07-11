@@ -1,7 +1,7 @@
 {
   "name": "@opendaw/studio-enums",
   "types": "./src/index.d.ts",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "exports": {
     ".": "./src/index.ts"
   },
@@ -10,7 +10,7 @@
     "test": "echo \"No tests to run\""
   },
   "devDependencies": {
-    "@opendaw/eslint-config": "*",
-    "@opendaw/typescript-config": "*"
+    "@opendaw/eslint-config": "^0.0.1",
+    "@opendaw/typescript-config": "^0.0.1"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "@opendaw/lib-std",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "types": "./src/index.ts",
   "exports": {
     ".": "./src/index.ts"
@@ -10,7 +10,7 @@
     "test": "vitest run"
   },
   "devDependencies": {
-    "@opendaw/eslint-config": "*",
-    "@opendaw/typescript-config": "*"
+    "@opendaw/eslint-config": "^0.0.1",
+    "@opendaw/typescript-config": "^0.0.1"
   }
 }
