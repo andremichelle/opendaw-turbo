@@ -1,6 +1,6 @@
 {
   "name": "@opendaw/studio-boxes",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -18,13 +18,13 @@
     "test": "echo \"No tests to run\""
   },
   "dependencies": {
-    "@opendaw/lib-box": "^0.0.2",
-    "@opendaw/lib-std": "^0.0.2",
-    "@opendaw/studio-enums": "^0.0.2"
+    "@opendaw/lib-box": "^0.0.3",
+    "@opendaw/lib-std": "^0.0.3",
+    "@opendaw/studio-enums": "^0.0.3"
   },
   "devDependencies": {
     "@opendaw/eslint-config": "^0.0.2",
-    "@opendaw/studio-forge-boxes": "^0.0.2",
+    "@opendaw/studio-forge-boxes": "^0.0.3",
     "@opendaw/typescript-config": "^0.0.1"
   }
 }

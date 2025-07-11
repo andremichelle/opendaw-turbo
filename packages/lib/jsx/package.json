@@ -1,6 +1,6 @@
 {
   "name": "@opendaw/lib-jsx",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "exports": {
     ".": "./src/index.ts"
   },
@@ -9,8 +9,8 @@
     "test": "echo \"No tests to run\""
   },
   "dependencies": {
-    "@opendaw/lib-dom": "^0.0.2",
-    "@opendaw/lib-std": "^0.0.2"
+    "@opendaw/lib-dom": "^0.0.3",
+    "@opendaw/lib-std": "^0.0.3"
   },
   "devDependencies": {
     "@opendaw/eslint-config": "^0.0.2",

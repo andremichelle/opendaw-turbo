@@ -1,6 +1,6 @@
 {
   "name": "@opendaw/lib-dom",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "exports": {
     ".": "./src/index.ts"
   },
@@ -10,8 +10,8 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@opendaw/lib-runtime": "^0.0.2",
-    "@opendaw/lib-std": "^0.0.2",
+    "@opendaw/lib-runtime": "^0.0.3",
+    "@opendaw/lib-std": "^0.0.3",
     "@types/wicg-file-system-access": "^2023.10.6"
   },
   "devDependencies": {

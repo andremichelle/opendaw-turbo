@@ -1,6 +1,6 @@
 {
   "name": "@opendaw/lib-box-forge",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "exports": {
     ".": "./src/index.ts"
@@ -14,10 +14,10 @@
     "test": "npm run gen && vitest run"
   },
   "dependencies": {
-    "@opendaw/lib-box": "^0.0.2",
-    "@opendaw/lib-dom": "^0.0.2",
-    "@opendaw/lib-runtime": "^0.0.2",
-    "@opendaw/lib-std": "^0.0.2",
+    "@opendaw/lib-box": "^0.0.3",
+    "@opendaw/lib-dom": "^0.0.3",
+    "@opendaw/lib-runtime": "^0.0.3",
+    "@opendaw/lib-std": "^0.0.3",
     "ts-morph": "^25.0.1",
     "tsx": "^4.20.3"
   },

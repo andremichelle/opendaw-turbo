@@ -1,6 +1,6 @@
 {
   "name": "@opendaw/studio-core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "exports": {
@@ -24,19 +24,19 @@
     "test": "echo \"No tests to run\""
   },
   "dependencies": {
-    "@opendaw/lib-box": "^0.0.2",
-    "@opendaw/lib-dsp": "^0.0.2",
-    "@opendaw/lib-fusion": "^0.0.2",
-    "@opendaw/lib-runtime": "^0.0.2",
-    "@opendaw/lib-std": "^0.0.2",
-    "@opendaw/studio-adapters": "^0.0.2",
-    "@opendaw/studio-boxes": "^0.0.2",
-    "@opendaw/studio-enums": "^0.0.2"
+    "@opendaw/lib-box": "^0.0.3",
+    "@opendaw/lib-dsp": "^0.0.3",
+    "@opendaw/lib-fusion": "^0.0.3",
+    "@opendaw/lib-runtime": "^0.0.3",
+    "@opendaw/lib-std": "^0.0.3",
+    "@opendaw/studio-adapters": "^0.0.3",
+    "@opendaw/studio-boxes": "^0.0.3",
+    "@opendaw/studio-enums": "^0.0.3"
   },
   "devDependencies": {
     "@opendaw/eslint-config": "^0.0.2",
-    "@opendaw/studio-core-processors": "^0.0.2",
-    "@opendaw/studio-forge-boxes": "^0.0.2",
+    "@opendaw/studio-core-processors": "^0.0.3",
+    "@opendaw/studio-forge-boxes": "^0.0.3",
     "@opendaw/typescript-config": "^0.0.1"
   }
 }
