@@ -1,6 +1,6 @@
 {
   "name": "@opendaw/lib-box",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "types": "./src/index.ts",
   "exports": {
     ".": "./src/index.ts"
@@ -11,11 +11,11 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@opendaw/lib-runtime": "^0.0.1",
-    "@opendaw/lib-std": "^0.0.1"
+    "@opendaw/lib-runtime": "^0.0.2",
+    "@opendaw/lib-std": "^0.0.2"
   },
   "devDependencies": {
-    "@opendaw/eslint-config": "^0.0.1",
+    "@opendaw/eslint-config": "^0.0.2",
     "@opendaw/typescript-config": "^0.0.1"
   }
 }

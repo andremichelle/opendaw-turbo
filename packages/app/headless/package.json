@@ -1,7 +1,7 @@
 {
   "name": "@opendaw/app-headless",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "scripts": {
     "dev": "vite --clearScreen false",
@@ -10,21 +10,21 @@
     "lint": "eslint \"src/**/*.ts\""
   },
   "dependencies": {
-    "@opendaw/lib-box": "^0.0.1",
-    "@opendaw/lib-dom": "^0.0.1",
-    "@opendaw/lib-dsp": "^0.0.1",
-    "@opendaw/lib-jsx": "^0.0.1",
-    "@opendaw/lib-runtime": "^0.0.1",
-    "@opendaw/lib-std": "^0.0.1",
-    "@opendaw/studio-adapters": "^0.0.1",
-    "@opendaw/studio-boxes": "^0.0.1",
-    "@opendaw/studio-core": "^0.0.1",
-    "@opendaw/studio-enums": "^0.0.1",
+    "@opendaw/lib-box": "^0.0.2",
+    "@opendaw/lib-dom": "^0.0.2",
+    "@opendaw/lib-dsp": "^0.0.2",
+    "@opendaw/lib-jsx": "^0.0.2",
+    "@opendaw/lib-runtime": "^0.0.2",
+    "@opendaw/lib-std": "^0.0.2",
+    "@opendaw/studio-adapters": "^0.0.2",
+    "@opendaw/studio-boxes": "^0.0.2",
+    "@opendaw/studio-core": "^0.0.2",
+    "@opendaw/studio-enums": "^0.0.2",
     "@types/markdown-it": "^14.1.2",
     "markdown-it": "^14.1.0"
   },
   "devDependencies": {
-    "@opendaw/eslint-config": "^0.0.1",
+    "@opendaw/eslint-config": "^0.0.2",
     "@opendaw/typescript-config": "^0.0.1",
     "@types/node": "^22.15.18",
     "eslint": "^8.57.0",
