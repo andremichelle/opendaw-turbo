@@ -1,6 +1,6 @@
 {
   "name": "@opendaw/studio-sdk",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "GPL-3.0-or-later",
   "description": "One-line installer for the complete OpenDAW Studio tool-chain",
   "repository": {
@@ -21,14 +21,14 @@
     "README.md"
   ],
   "dependencies": {
-    "@opendaw/lib-box": "^0.0.3",
-    "@opendaw/lib-dsp": "^0.0.3",
-    "@opendaw/lib-fusion": "^0.0.4",
-    "@opendaw/lib-runtime": "^0.0.3",
-    "@opendaw/lib-std": "^0.0.3",
-    "@opendaw/studio-adapters": "^0.0.4",
-    "@opendaw/studio-boxes": "^0.0.3",
-    "@opendaw/studio-core": "^0.0.4",
-    "@opendaw/studio-enums": "^0.0.3"
+    "@opendaw/lib-box": "^0.0.4",
+    "@opendaw/lib-dsp": "^0.0.4",
+    "@opendaw/lib-fusion": "^0.0.5",
+    "@opendaw/lib-runtime": "^0.0.4",
+    "@opendaw/lib-std": "^0.0.4",
+    "@opendaw/studio-adapters": "^0.0.5",
+    "@opendaw/studio-boxes": "^0.0.4",
+    "@opendaw/studio-core": "^0.0.5",
+    "@opendaw/studio-enums": "^0.0.4"
   }
 }
