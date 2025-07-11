@@ -1,6 +1,7 @@
 {
   "name": "@opendaw/studio-forge-boxes",
   "version": "0.0.0",
+  "private": true,
   "exports": {
     ".": "./src/index.ts"
   },

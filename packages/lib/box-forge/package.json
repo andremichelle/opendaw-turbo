@@ -1,6 +1,7 @@
 {
   "name": "@opendaw/lib-box-forge",
   "version": "0.0.0",
+  "private": true,
   "exports": {
     ".": "./src/index.ts"
   },
