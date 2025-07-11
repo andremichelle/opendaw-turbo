@@ -17,7 +17,7 @@
     "synth",
     "fx"
   ],
-  "readmeFilename": "./README.md",
+  "readme": "./README.md",
   "dependencies": {
     "@opendaw/lib-box": "^0.0.5",
     "@opendaw/lib-dsp": "^0.0.5",
