@@ -1,6 +1,6 @@
 {
   "name": "@opendaw/studio-sdk",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "license": "GPL-3.0-or-later",
   "description": "One-line installer for the complete OpenDAW Studio tool-chain",
   "repository": {
