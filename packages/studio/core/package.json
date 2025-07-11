@@ -1,15 +1,19 @@
 {
   "name": "@opendaw/studio-core",
   "version": "0.0.2",
-  "types": "./src/index.d.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
     "./engine-processor.js": "./dist/engine-processor.js",
     "./meter-processor.js": "./dist/meter-processor.js",
     "./recording-processor.js": "./dist/recording-processor.js"
   },
   "files": [
-    "src/**/*",
+    "dist/**/*",
     "dist/engine-processor.js",
     "dist/meter-processor.js",
     "dist/recording-processor.js"
