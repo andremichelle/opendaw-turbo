@@ -4,7 +4,7 @@ import {Arrays} from "@opendaw/lib-std"
 import {BoxAdapters} from "../BoxAdapters"
 import {ModuleConnectionAdapter} from "./connection"
 
-export const enum Direction {Input = "input", Output = "output"}
+export enum Direction {Input = "input", Output = "output"}
 
 export class ModuleConnectorAdapter<CONNECTION_TYPE extends Pointers, Direction> {
     static create<CONNECTION_TYPE extends Pointers, Direction>(
