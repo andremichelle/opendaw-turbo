@@ -1,9 +1,5 @@
 # openDAW SDK
 
-**openDAW** is a next-generation web-based Digital Audio Workstation (DAW) designed to **democratize** music production
-and to **resurface the process of making music** by making **high-quality** creation tools accessible to everyone, with
-a strong focus on **education** and hands-on **learning**.
-
 ## 1. Add everything in one shot
 
 `npm install @opendaw/studio-sdk`
